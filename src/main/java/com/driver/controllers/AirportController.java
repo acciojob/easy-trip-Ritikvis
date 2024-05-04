@@ -59,7 +59,7 @@ public class AirportController {
 
         for (Flight flight : flights.values()) {
             if (Objects.equals(flight.getFlightDate(), date)) {
-                if (flight.getFromCity().equals(airportName) || flight.getToCity().equals(airportName)) {
+                if (flight.getFromCity().toString().equals(airportName) || flight.getToCity().toString().equals(airportName)) {
                     count += flightPassengerMap.getOrDefault(flight.getFlightId(), new HashSet<>()).size();
                 }
             }
